@@ -1,10 +1,10 @@
 /**
  * Exercise 1: Write an arrow function that returns the string 'Hello World!'. 
  */
-var helloWorld = () => "Hello World!"
-console.log(helloWorld())
-var helloWorld = () => { return "Hello World Again!" }
-console.log(helloWorld())
+var helloWorld5 = () => 'Hello World!'
+console.log(helloWorld5())
+var helloWorld6 = () => { return 'Hello World Again!' }
+console.log(helloWorld6())
 
 /**
  * Exercise 2: Write an arrow function that expects an array of integers, 
@@ -24,44 +24,44 @@ var sum = (values) => {
   return values.reduce((accumulator, currentValue) => accumulator + currentValue)
 }
 
- console.log(sum([1, 2, 3, 4]))
+console.log(sum([1, 2, 3, 4]))
 
- /**
-  * Exercise 3: Rewrite the following code by using arrow functions wherever 
-  * it makes sense to use them:
-  */
+/**
+ * Exercise 3: Rewrite the following code by using arrow functions wherever 
+ * it makes sense to use them:
+ */
 
-var Entity = function( name, delay ) { 
-   this.name = name; 
-   this.delay = delay; 
-};
+var Entity5 = function( name, delay ) { 
+  this.name = name
+  this.delay = delay
+}
  
-Entity.prototype.greet = function() { 
+Entity5.prototype.greet = function() { 
   setTimeout( function() { 
-    console.log( 'Hi, I am ' + this.name ); 
-  }.bind( this ), this.delay ); 
-};
+    console.log( 'Hi, I am ' + this.name )
+  }.bind( this ), this.delay )
+}
 
-var java = new Entity( 'Java', 5000 ); 
-var cpp = new Entity( 'C++', 30 );
+var java5 = new Entity5( 'Java', 5000 )
+var cpp5 = new Entity5( 'C++', 30 )
 
-java.greet(); 
-cpp.greet();
+java5.greet()
+cpp5.greet()
 
 // Solution
-var Entity = function ( name, delay ) { 
-  this.name = name; 
-  this.delay = delay; 
-};
+var Entity6 = function ( name, delay ) { 
+  this.name = name
+  this.delay = delay
+}
 
-Entity.prototype.greet = function() { 
- setTimeout( () => { 
-   console.log( 'Hi, I am ' + this.name ); 
- }, this.delay ); 
-};
+Entity6.prototype.greet = function() {
+  setTimeout( () => {
+    console.log( 'Hi, I am ' + this.name ) 
+  }, this.delay ) 
+}
 
-var java = new Entity( 'Java', 5000 ); 
-var cpp = new Entity( 'C++', 30 );
+var java6 = new Entity6( 'Java', 5000 )
+var cpp6 = new Entity6( 'C++', 30 )
 
-java.greet(); 
-cpp.greet();
+java6.greet()
+cpp6.greet()

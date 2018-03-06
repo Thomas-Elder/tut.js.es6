@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Thomas-Elder/tut.js.es6/issues"
   },
-  "homepage": "https://github.com/Thomas-Elder/tut.js.es6#readme"
+  "homepage": "https://github.com/Thomas-Elder/tut.js.es6#readme",
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1"
+  }
 }
