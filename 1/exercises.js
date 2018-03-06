@@ -20,8 +20,48 @@ console.log(helloWorld())
  * in the array. 
  */
 
- var sum = (values) => {
+var sum = (values) => {
   return values.reduce((accumulator, currentValue) => accumulator + currentValue)
- }
+}
 
  console.log(sum([1, 2, 3, 4]))
+
+ /**
+  * Exercise 3: Rewrite the following code by using arrow functions wherever 
+  * it makes sense to use them:
+  */
+
+var Entity = function( name, delay ) { 
+   this.name = name; 
+   this.delay = delay; 
+};
+ 
+Entity.prototype.greet = function() { 
+  setTimeout( function() { 
+    console.log( 'Hi, I am ' + this.name ); 
+  }.bind( this ), this.delay ); 
+};
+
+var java = new Entity( 'Java', 5000 ); 
+var cpp = new Entity( 'C++', 30 );
+
+java.greet(); 
+cpp.greet();
+
+// Solution
+var Entity = function ( name, delay ) { 
+  this.name = name; 
+  this.delay = delay; 
+};
+
+Entity.prototype.greet = function() { 
+ setTimeout( () => { 
+   console.log( 'Hi, I am ' + this.name ); 
+ }, this.delay ); 
+};
+
+var java = new Entity( 'Java', 5000 ); 
+var cpp = new Entity( 'C++', 30 );
+
+java.greet(); 
+cpp.greet();
