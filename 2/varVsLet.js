@@ -1,3 +1,4 @@
+/*eslint no-use-before-define: "off"*/
 
 /**
  * Variables declared with var have function scope.
