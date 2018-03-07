@@ -1,4 +1,5 @@
 /*eslint no-use-before-define: "off"*/
+/*eslint no-unused-vars: "off"*/
 
 /**
  * Variables declared with var have function scope.
@@ -74,7 +75,7 @@ console.log('a is ', a)
  * That's because the let statement is confined to the block, while the var 
  * statement is effectively global here.
  * 
- * In ES6 the above iteration would look like
+ * In ES6 the above iteration would look like:
  */
 
 console.log('es6 array syntax... ')
