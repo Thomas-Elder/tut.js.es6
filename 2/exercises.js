@@ -99,3 +99,51 @@ console.log('after test1 dec ', test1)
 //testf1()
 console.log(test1)
 
+
+/**
+ * Exercise 2: Modify the code such that all six console logs print out their 
+ * values exactly once, and the printed values are the following:
+ * 1 3 
+ * 1 3 
+ * 1 2 
+ * 5 
+ * 5 6 
+ * 1 2
+ * You are not allowed to touch the console logs, just the rest of the code.
+ */
+
+var guessMe3 = 1
+let guessMe4 = 2
+
+{
+  let guessMe4 = 3 // moved this above the first log to avoid error
+
+  try { 
+    console.log('line 122 ', guessMe3, guessMe4 ) // (A)
+  } catch( _ ) {
+    console.log(_)
+  }
+
+  console.log('Line 127 ', guessMe3, guessMe4 ) // (B)
+}
+
+console.log('Line 130 ', guessMe3, guessMe4 ) // (C)
+
+var bar = () => {
+  var guessMe3 = 5 // moved this above the log to avoid undefined
+
+  console.log('Line 135 ', guessMe3 ) // (D)
+  
+  let guessMe4 = 6
+  console.log('Line 138 ', guessMe3, guessMe4 ) // (E)
+}
+
+bar()
+
+console.log('Line 143 ', guessMe3, guessMe4 )// (F)
+
+/**
+ * Exercise 3: Add the linter of your choice to your text editor or IDE. 
+ * Configure your linter such that you never have to worry about leaving a 
+ * temporal dead zone unnoticed. 
+ */
