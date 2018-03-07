@@ -24,6 +24,7 @@
             "error",
             "never"
         ],
-        "no-console": "off"
+        "no-console": "off",
+        "no-use-before-define": "error"
     }
 }

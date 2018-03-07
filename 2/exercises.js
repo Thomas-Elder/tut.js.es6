@@ -8,7 +8,7 @@ let guessMe2 = 2
 
 {
   try { 
-    console.log('guessMe1, guessMe2 ', guessMe1, guessMe2 ) // (A)
+    //console.log('guessMe1, guessMe2 ', guessMe1, guessMe2 ) // (A)
 
     /**
      * guessMe1 should be 1
@@ -36,7 +36,7 @@ console.log('Line 30 ', guessMe1, guessMe2 ) // (C)
  */
 
 var foo = () => {
-  console.log('Line 37 ', guessMe1 ) // (D)
+  //console.log('Line 37 ', guessMe1 ) // (D)
   /**
    * guessMe1 should be 1 wrong!
    * guessMe1 is undefined here;
@@ -147,3 +147,5 @@ console.log('Line 143 ', guessMe3, guessMe4 )// (F)
  * Configure your linter such that you never have to worry about leaving a 
  * temporal dead zone unnoticed. 
  */
+
+ // Have added the 'no-use-before-define' rule to eslintrc.json
