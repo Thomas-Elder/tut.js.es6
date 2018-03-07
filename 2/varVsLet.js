@@ -18,7 +18,7 @@ logAge5()
 // prints age: undefined
 
 function logAge6() {
-  console.log('age: ', age)
+  //console.log('age: ', age)
   let age = 25
 }
 
@@ -51,3 +51,35 @@ console.log(guessMe)
  * 
  * It does not exist for var, function, and function* declarations.
  */
+
+/**
+ * Ok so if var is function scope and let is block scope then...
+ */
+
+let array = [1, 2, 3, 4]
+
+for (var index = 0; index < array.length; index++) {
+  console.log(array[index])
+  var a = 1
+  //let b = 2
+}
+
+console.log('a is ', a)
+//console.log('b is ', b)
+
+/**
+ * So if you uncomment the let b and consolelog b statements, you get a 'not defined' error
+ * while the var statement works without error. 
+ * 
+ * That's because the let statement is confined to the block, while the var 
+ * statement is effectively global here.
+ * 
+ * In ES6 the above iteration would look like
+ */
+
+console.log('es6 array syntax... ')
+
+array.forEach((element, index) => {
+  console.log(element)
+  console.log(index)
+})
