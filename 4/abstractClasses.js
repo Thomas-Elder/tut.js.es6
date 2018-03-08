@@ -19,3 +19,8 @@ class Chart extends ChartView {}
 
 let cv = new ChartView() // throws that error when you run it
 let c = new Chart()
+
+/**
+ * There is a built-in property new.target which contains a reference to the class
+ * after 'new' during instantiation.
+ */
