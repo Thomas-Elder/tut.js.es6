@@ -5,29 +5,29 @@
 
 class Square {
   constructor(width) {
-    this.width = width
+    this.width = width;
   }
 
   get area() {
-    return this.width * this.width
+    return this.width * this.width;
   }
 }
 
-let square = new Square(50)
+let square = new Square(50);
 
-console.log(square.area)
+console.log(square.area);
 
-square.area = 30
-console.log(square.area) // still prints 2500 as the previous 'setter' is not defined.
+square.area = 30;
+console.log(square.area); // still prints 2500 as the previous 'setter' is not defined.
 
 class Rectangle {
   constructor(width, height) {
-    this.width = width
-    this.height = height
+    this.width = width;
+    this.height = height;
   }
 
   get area() {
-    return this.width * this.height
+    return this.width * this.height;
   }
 
   //set width(w) { }
@@ -45,7 +45,7 @@ class Rectangle {
    */
 
   set doubleWidth(dw) {
-    this.width = dw / 2
+    this.width = dw / 2;
   }
 
   /**
@@ -57,19 +57,19 @@ class Rectangle {
    */
 }
 
-let rect = new Rectangle(20, 10)
+let rect = new Rectangle(20, 10);
 
-console.log()
-console.log('Rectangle')
-console.log(rect.area)
-console.log(rect.height)
-console.log(rect.width)
-console.log()
+console.log();
+console.log('Rectangle');
+console.log(rect.area);
+console.log(rect.height);
+console.log(rect.width);
+console.log();
 
-console.log('Setting new width and height')
-rect.doubleWidth = 30
-rect.height = 40
+console.log('Setting new width and height');
+rect.doubleWidth = 30;
+rect.height = 40;
 
-console.log(rect.area)
-console.log(rect.height)
-console.log(rect.width)
+console.log(rect.area);
+console.log(rect.height);
+console.log(rect.width);

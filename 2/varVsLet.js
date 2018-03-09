@@ -11,19 +11,19 @@
  */
 
 function logAge5() {
-  console.log('age: ', age)
-  var age = 25
+  console.log('age: ', age);
+  var age = 25;
 }
 
-logAge5()
+logAge5();
 // prints age: undefined
 
 function logAge6() {
   //console.log('age: ', age)
-  let age = 25
+  let age = 25;
 }
 
-logAge6()
+logAge6();
 // throws error as age is uninitialised
 
 /**
@@ -32,18 +32,18 @@ logAge6()
  * is initialised outside the block...
  */
 
-let guessMe = 1 
+let guessMe = 1;
 // A: guessMe is 1
-console.log(guessMe)
+console.log(guessMe);
 
 { 
   // Temporal Dead Zone of guessMe 
-  let guessMe = 2 
+  let guessMe = 2;
   // C: guessMe is 2
-  console.log(guessMe)
+  console.log(guessMe);
 }
 
-console.log(guessMe)
+console.log(guessMe);
 // D: guessMe is 1
 
 /**
@@ -57,16 +57,16 @@ console.log(guessMe)
  * Ok so if var is function scope and let is block scope then...
  */
 
-let array = [1, 2, 3, 4]
+let array = [1, 2, 3, 4];
 
 for (var index = 0; index < array.length; index++) {
-  console.log(array[index])
-  var a = 1
-  //let b = 2
+  console.log(array[index]);
+  var a = 1;
+  //let b = 2;
 }
 
-console.log('a is ', a)
-//console.log('b is ', b)
+console.log('a is ', a);
+//console.log('b is ', b);
 
 /**
  * So if you uncomment the let b and consolelog b statements, you get a 'not defined' error
@@ -78,9 +78,9 @@ console.log('a is ', a)
  * In ES6 the above iteration would look like:
  */
 
-console.log('es6 array syntax... ')
+console.log('es6 array syntax... ');
 
 array.forEach((element, index) => {
-  console.log(element)
-  console.log(index)
-})
+  console.log(element);
+  console.log(index);
+});

@@ -8,7 +8,7 @@
 class ChartView {
   constructor() {
     if (new.target === ChartView) {
-      throw new Error('Abstract class ChartView cannot be instantiated')
+      throw new Error('Abstract class ChartView cannot be instantiated');
     }
   }
 }
@@ -17,8 +17,8 @@ class ChartView {
 
 class Chart extends ChartView {}
 
-let cv = new ChartView() // throws that error when you run it
-let c = new Chart()
+let cv = new ChartView(); // throws that error when you run it
+let c = new Chart();
 
 /**
  * There is a built-in property new.target which contains a reference to the class

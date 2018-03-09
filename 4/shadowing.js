@@ -7,20 +7,20 @@
 
 class User {
   constructor() {
-    this.accessMatrix = {}
+    this.accessMatrix = {};
   }
 
   hasAccess(page) {
-    return this.accessMatrix[page]
+    return this.accessMatrix[page];
   }
 }
 
 class SuperUser extends User {
   hasAccess(page) {
-    return true
+    return true;
   }
 }
 
-var su = new SuperUser()
+var su = new SuperUser();
 
-console.log(su.hasAccess('Admin'))
+console.log(su.hasAccess('Admin'));
