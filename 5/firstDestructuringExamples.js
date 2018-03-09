@@ -115,3 +115,9 @@ console.log(name); // prints Ashley
  * 
  * let {name} = user; 
  */
+
+/**
+ * Make sure you use the let key word to initialize new variables. 
+ * 
+ * You can only destructure an object or an array, if all the variables inside have been declared.
+ */
