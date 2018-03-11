@@ -23,11 +23,16 @@ let user = {
   email: 'email@email.com'
 };
 
-function foo (name, email) {
+function foo ({name, email}) {
   console.log(name);
   console.log(email);
 }
 
 foo(user);
 
-// Apparently not, prints {} and undefined...
+/** Yes. Nift. Note it appears L needs to match the R by type... 
+ * That is, this function signature does not work:
+ *    function foo (name, email) {
+ * It assigns the parameter user to name, and undefined to email. 
+ * Ok.
+ */
