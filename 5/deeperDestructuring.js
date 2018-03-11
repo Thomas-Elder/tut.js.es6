@@ -3,11 +3,11 @@
 /**
  * Deeperdestructuring 
  * 
- * It is possible to destructure objects and arrays in any depth. 
+ * It is possible to destructure objects and arrays in any depth. // What does this mean!?
  * 
- * Default values can also be used. 
+ * Default values can also be used. // Cool.
  * 
- * Objects or arrays that don’t exist on the right become assigned to undefined on the left.
+ * Objects or arrays that don’t exist on the right become assigned to undefined on the left. // Cool
  */
 
 let user = {
