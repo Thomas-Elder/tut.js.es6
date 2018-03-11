@@ -29,3 +29,11 @@ let {
   ],
   nextLesson: eighth
 } = user;
+
+console.log(first,
+  second,
+  third,
+  fourth,
+  fifth,
+  sixth,
+  seventh);
