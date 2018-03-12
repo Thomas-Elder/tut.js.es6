@@ -19,3 +19,11 @@
 ((...args) => {
   console.log(args); 
 })(1, 'Second', 3); // prints [ 1, 'Second', 3 ], interestingly... an array!
+
+/**
+ * The rest parameter has to be the last argument of a function. 
+ * 
+ * As a consequence, there can only be one rest parameter in a function.
+ * 
+ * If the rest parameter is not the last argument of the argument list of a function, an error is thrown.
+ */
