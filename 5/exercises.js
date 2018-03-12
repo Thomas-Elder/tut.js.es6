@@ -108,7 +108,6 @@ let config = {
  * 
  * The default values are the same as in the example configuration object.
  */
-console.log('Exercise 5');
 
 function drawChart(data, {chartType=0, bullColour='green', bearColour='red', days=30}) {
   
@@ -119,3 +118,19 @@ function drawChart(data, {chartType=0, bullColour='green', bearColour='red', day
 }
 
 drawChart(40, {chartType:5, bullColour:'blue', bearColour:'orange', days:50});
+
+/**
+ * Exercise 6. Modify your solution in Exercise 5 such that the user may omit the option 
+ * parameter, making its value undefined.
+ */
+console.log('Exercise 6');
+
+function drawChart6(data, {chartType=0, bullColour='green', bearColour='red', days=30}={}) {
+  
+  console.log(chartType);
+  console.log(bullColour);
+  console.log(bearColour);
+  console.log(days);
+}
+
+drawChart6(5);
