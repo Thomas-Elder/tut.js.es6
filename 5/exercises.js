@@ -87,3 +87,35 @@ let x = { A: [ 't', 'e', 's', 't' ] };
 let {A:[,,third]} = x;
 
 console.log(third);
+
+/**
+ * Exercise 5. Suppose the following configuration object of a financial chart is given:
+ */
+console.log('Exercise 5');
+
+let config = {
+  chartType: 0,
+  bullColour: 'green',
+  bearColour: 'red',
+  days: 30
+};
+
+/**
+ * Complete the function signature below such that the function may be called with any config 
+ * objects (null and undefined are not allowed as inputs). 
+ * 
+ * If any of the four keys are missing, substitute their default values. 
+ * 
+ * The default values are the same as in the example configuration object.
+ */
+console.log('Exercise 5');
+
+function drawChart(data, {chartType=0, bullColour='green', bearColour='red', days=30}) {
+  
+  console.log(chartType);
+  console.log(bullColour);
+  console.log(bearColour);
+  console.log(days);
+}
+
+drawChart(40, {chartType:5, bullColour:'blue', bearColour:'orange', days:50});
