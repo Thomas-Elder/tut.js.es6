@@ -1,3 +1,4 @@
+/*eslint no-unused-vars: "off"*/
 
 /**
  * Exercise 1. Make a shallow copy of an array of any length in one destructuring assignment.
@@ -43,6 +44,14 @@ console.table( A );
  */
 console.log('Exercise 3');
 
+let arr = () => [1,2,3,4,5,6,7,8,9,10];
+let nuf = () => {
+  return null;
+};
+
+let ans = arr().map(arr).map(nuf);
+
+console.log(ans);
 
 /** Exercise 4. Rewrite the sumArgs function of this tutorial in ES2015, 
  * using a rest parameter and arrow functions.
@@ -78,6 +87,6 @@ let maxCommon = ([head1,...tail1], [head2,...tail2], len = 0) => {
   let secondBranch = 5;/* Write code here */ 
   
   return Math.max( ...[len, firstBranch, secondBranch ] ); 
-}
+};
 
 maxCommon( '123', '1' );
