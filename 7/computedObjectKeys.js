@@ -76,7 +76,7 @@ let obj3 = {
 
 let experimentObject3 = {
   arr3,
-  arr3: 1, // duplicate key issue!
+  //arr3: 1, // duplicate key issue!
   // arr3.length: 2, accessing a property of another object seems to break syntax here.
   obj3: 3
 };
