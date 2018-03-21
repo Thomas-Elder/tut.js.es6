@@ -17,7 +17,7 @@ let experimentObject = {
   [{}]: 3
 };
 
-console.log("Part one");
+console.log('Part one');
 
 console.log('experimentObject.arr', experimentObject.arr);
 console.log('experimentObject[\'arr\']', experimentObject['arr']);
@@ -47,7 +47,7 @@ console.log('experimentObject[\'[object Object]\']', experimentObject['[object O
  * // Ok.... hang on.
  */
 
-let arr2 = [1, 2, 3, 4, 5];
+let arr2 = [1, 2, 3, 4, 6];
 let obj2 = {
   'thing': 23
 };
@@ -59,8 +59,9 @@ let experimentObject2 = {
   [obj2]: 3
 };
 
-console.log("Part two");
+console.log('Part two');
 console.log('experimentObject2[\'[object Object]\']', experimentObject2['[object Object]']);
+console.log('experimentObject2: \n', experimentObject2);
 
 /**
  * that prints 3. so the contents of the object are irrelevent. 
@@ -75,22 +76,33 @@ let obj3 = {
 
 let experimentObject3 = {
   arr3,
-  arr3: 1, 
+  arr3: 1, // duplicate key issue!
   // arr3.length: 2, accessing a property of another object seems to break syntax here.
   obj3: 3
 };
 
-console.log("Part three");
+console.log('Part three');
 console.log('experimentObject3.arr', experimentObject3.arr3);
 console.log('experimentObject3[\'arr\']', experimentObject3['arr3']);
 console.log('experimentObject3[arr]', experimentObject3[arr3]);
 console.log('experimentObject3[arr.length]', experimentObject3[arr3.length]);
 console.log('experimentObject3[{}]', experimentObject3[{}]);
 console.log('experimentObject3[\'[object Object]\']', experimentObject3['[object Object]']);
+console.log('experimentObject3[obj3]', experimentObject3[obj3]);
 
 /**
  * Humm, most of that is undefined, except the accessing of arr3 property, which returns 1
  * both times.
  * 
  * Need to dig a bit deeper on that syntax. 
+ */
+
+
+/**
+ * Okay guys. The [] notation specifies those property keys as computed values. In the same way
+ * that accessing a property using experimentObject[somekey], where somekey could be a variable or 
+ * expression like experimentObject[1+3], the expression is evaluated first, then passed as a key.
+ * 
+ * So this whole thing has been talking about how you can do the same thing when declaring object
+ * literals now. Neat.
  */
