@@ -103,6 +103,11 @@ let myBasket = {
     super.clearBasket();
   },
 
+  removeFromBasket(index) {
+    super.addToBasket(-this.basketItems[index].itemPrice);
+    this.basketItems.splice(index, 1);
+  },
+
   printBasket(){
     if (this.basketItems.length === 0) {
       console.log('The basket is empty.');
@@ -120,12 +125,37 @@ myBasket.addToBasket('Thing', 30);
 myBasket.addToBasket('Thing', 40);
 myBasket.printBasket();
 
+console.log();
 console.log('Getting basket value... ');
 myBasket.getBasketValue();
 
+console.log();
 console.log('Paying... ');
 myBasket.pay();
 
+console.log();
 console.log('Clearing... ');
 myBasket.clearBasket();
 myBasket.printBasket();
+
+console.log();
+console.log('Adding back to basket... ');
+myBasket.addToBasket('Thing', 20);
+myBasket.addToBasket('Thing', 30);
+myBasket.addToBasket('Thing', 40);
+myBasket.printBasket();
+
+console.log();
+console.log('Removing index 1 from basket... ');
+myBasket.removeFromBasket(1);
+myBasket.printBasket();
+
+/**
+ * Exercise4.
+ * Extend your solution in Exercise 3 by adding a removeFromBasket( index ) method. 
+ * 
+ * The parameter index should be the index of the element in the array that you would like to remove.
+ * 
+ * I'm just going to add this above to myBasket to avoid duplicate objects.
+ */
+
