@@ -104,7 +104,12 @@ let myBasket = {
   },
 
   printBasket(){
-    console.log(this.basketItems === [] ? 'The basket is empty.' : this.basketItems.forEach(item => console.log(item)));
+    if (this.basketItems.length === 0) {
+      console.log('The basket is empty.');
+    } else {
+      console.log('Basket contents:');
+      this.basketItems.forEach(item => console.log(item));
+    }
   }
 };
 
@@ -115,9 +120,12 @@ myBasket.addToBasket('Thing', 30);
 myBasket.addToBasket('Thing', 40);
 myBasket.printBasket();
 
+console.log('Getting basket value... ');
 myBasket.getBasketValue();
 
+console.log('Paying... ');
 myBasket.pay();
 
+console.log('Clearing... ');
 myBasket.clearBasket();
 myBasket.printBasket();
