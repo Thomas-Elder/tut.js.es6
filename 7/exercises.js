@@ -52,7 +52,9 @@ let proto = {
   basketValue: 0,
 
   addToBasket(value) {
-    this.basketValue =+ value;
+    console.log('Adding ', value, ' to the basket');
+    this.basketValue += value;
+    console.log('Current value: ', this.basketValue);
   },
   
   clearBasket() {
@@ -72,3 +74,50 @@ console.log(proto.getBasketValue());
 proto.addToBasket(5);
 console.log(proto.getBasketValue());
 proto.pay();
+
+/**
+ * (Solution) Exercise 3. Create an object myBasket, and set its prototype to the 
+ * object created in Exercise 2. 
+ * 
+ * Create an array field in myBasket, containing all the items that you purchase in the following format:
+ *  { itemName: 'string', itemPrice: 9.99 }
+ * 
+ * Redefine the addToBasket method such that it accepts an itemName and an itemPrice. 
+ * 
+ * Call the addToBasket method in the prototype for the price administration, and store the 
+ * itemName-itemPrice datalocallyin your array. 
+ * 
+ * Make sure you modify the clearBasket method accordingly.
+ */
+
+let myBasket = {
+  basketItems: [],
+
+  addToBasket(itemName, itemPrice) {
+    this.basketItems.push({itemName, itemPrice});
+    super.addToBasket(itemPrice);
+  },
+
+  clearBasket(){
+    this.basketItems = [];
+    super.clearBasket();
+  },
+
+  printBasket(){
+    console.log(this.basketItems === [] ? 'The basket is empty.' : this.basketItems.forEach(item => console.log(item)));
+  }
+};
+
+Object.setPrototypeOf(myBasket, proto);
+
+myBasket.addToBasket('Thing', 20);
+myBasket.addToBasket('Thing', 30);
+myBasket.addToBasket('Thing', 40);
+myBasket.printBasket();
+
+myBasket.getBasketValue();
+
+myBasket.pay();
+
+myBasket.clearBasket();
+myBasket.printBasket();
