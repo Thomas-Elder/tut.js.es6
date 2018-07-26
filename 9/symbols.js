@@ -41,7 +41,7 @@ console.log(myObject[symbol1]);
  * Not even the for-in loop or Object.keys can enumerate them:
  */
 
-JSON.stringify( myObject ) 
+JSON.stringify( myObject );
 // >"{"publicProperty":"Value of myObject[ \"publicProperty\" ] "}"
 
 for( var prop in myObject ) { 
