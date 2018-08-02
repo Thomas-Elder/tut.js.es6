@@ -28,7 +28,7 @@ class Square {
  * 
  * One option to hide _width is to create a closure:
  */
-let Square = (function(){
+let Square2 = (function(){
   const _width = Symbol('width');
 
   return class {
