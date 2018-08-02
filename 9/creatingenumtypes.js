@@ -1,4 +1,6 @@
 
+/*eslint no-unused-vars: "off"*/
+
 /**
  * Creating enum types
  * Enums allow you to define constants with semantic names and unique values. 
