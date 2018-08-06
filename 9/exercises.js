@@ -27,4 +27,6 @@
 /**
  * Exercise2.
  * Find a way to simulate truly private fields in JavaScript!
+ * 
+ * Honestly this is going through to the keeper, I think I'll move on. 
  */
