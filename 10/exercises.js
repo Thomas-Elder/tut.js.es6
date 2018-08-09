@@ -1,4 +1,6 @@
 
+/*eslint no-unused-vars: "off"*/
+
 /**
  * Exercise 1
  * 
@@ -6,9 +8,15 @@
  * headings and log the concat of those chars. 
  */
 
+let headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+let chars = '';
 
+for (let heading of headings){
+  chars += heading.childNodes[0].textContent[0];
+}
 
-
+console.log(chars);
+ 
 /**
  * Exercise 2 
  * 
