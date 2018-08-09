@@ -16,8 +16,8 @@ for (let heading of headings){
 }
 
 console.log(chars);
- 
-/**
+
+/** 
  * Exercise 2 
  * 
  * Assemble a string containing all emojis between the hex codes 1f601 and 1f64f.
@@ -35,9 +35,11 @@ let digits4 = '01234';
 let digits5 = '01234567890ABCDEF'; 
 let emojis = '';
 
+for ( let digit4 of digits4 ) { 
+  for ( let digit5 of digits5 ) { 
+    let hexCode = '0x' + prefix + digit4 + digit5; 
+    emojis += String.fromCodePoint( hexCode ); 
+  } 
+}
 
-// Write code here 
-let hexCode = '0x' + prefix + digit4 + digit5; 
-emojis += String.fromCodePoint( hexCode ); 
-
-// Write code her
+console.log( emojis );
